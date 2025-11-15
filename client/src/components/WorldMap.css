@@ -1,0 +1,109 @@
+.world-map-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.world-map {
+  width: 100%;
+  height: 100%;
+  background: #a8daff;
+}
+
+.leaflet-container {
+  background: #a8daff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.country-popup {
+  min-width: 250px;
+}
+
+.country-popup h3 {
+  margin: 0 0 10px 0;
+  color: #667eea;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 8px;
+}
+
+.visits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.visit-item {
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #667eea;
+}
+
+.visit-dates {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.visit-places {
+  color: #4a5568;
+  font-size: 0.85rem;
+}
+
+.visit-places strong {
+  color: #2d3748;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-content {
+  margin: 15px;
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+/* Place markers (red dots for specific cities) */
+.place-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.place-marker-inner {
+  width: 10px;
+  height: 10px;
+  background: #dc2626;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.place-marker-inner:hover {
+  background: #b91c1c;
+  transform: scale(1.4);
+  box-shadow: 0 3px 8px rgba(220, 38, 38, 0.8);
+}
+
+.place-popup {
+  text-align: center;
+  padding: 5px;
+}
+
+.place-popup strong {
+  color: #dc2626;
+  font-size: 1.1rem;
+}
+
+.place-popup small {
+  color: #718096;
+}

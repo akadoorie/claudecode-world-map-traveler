@@ -1,0 +1,37 @@
+[
+  {
+    "dateFrom": "2020-01-15",
+    "dateTo": "2020-01-25",
+    "country": "France",
+    "area": "Provence",
+    "places": ["Paris", "Nice", "Marseille"]
+  },
+  {
+    "dateFrom": "2020-06-10",
+    "dateTo": "2020-06-20",
+    "country": "Italy",
+    "area": "",
+    "places": ["Rome", "Venice", "Florence"]
+  },
+  {
+    "dateFrom": "2021-03-05",
+    "dateTo": "2021-03-15",
+    "country": "Spain",
+    "area": "Catalonia",
+    "places": ["Barcelona", "Girona"]
+  },
+  {
+    "dateFrom": "2021-08-01",
+    "dateTo": "2021-08-10",
+    "country": "Germany",
+    "area": "",
+    "places": ["Berlin", "Munich"]
+  },
+  {
+    "dateFrom": "2022-02-14",
+    "dateTo": "2022-02-21",
+    "country": "Japan",
+    "area": "",
+    "places": ["Tokyo", "Kyoto", "Osaka"]
+  }
+]
