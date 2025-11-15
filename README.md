@@ -103,6 +103,35 @@ npm start
 
 The application will open automatically in your browser at `http://localhost:3000`
 
+## Stopping the Application
+
+You can easily stop the application using the provided scripts:
+
+### Windows (Command Prompt or PowerShell)
+```bash
+# Stop both client and server
+stop-all.bat
+
+# Or stop them individually
+stop-client.bat  # Stops React client on port 3000
+stop-server.bat  # Stops Flask server on port 5000
+```
+
+### Git Bash or WSL
+```bash
+# Stop both client and server
+./stop-all.sh
+
+# Or stop them individually
+./stop-client.sh  # Stops React client on port 3000
+./stop-server.sh  # Stops Flask server on port 5000
+```
+
+### Manual Method
+If the scripts don't work, you can:
+- Close the terminal windows where you started the servers
+- Or press `Ctrl+C` in each terminal window
+
 ## How to Use
 
 ### Initial View
