@@ -164,13 +164,13 @@ const WorldMap = ({ entries, allEntries, refreshTrigger, onWarning }) => {
       const isCurrent = countryName === currentCountry;
 
       if (isVisited) {
-        // Current country gets a different color (orange)
+        // Current country gets a different color (red)
         if (isCurrent) {
           return {
-            fillColor: '#f59e0b',
+            fillColor: '#ef4444',
             weight: 3,
             opacity: 1,
-            color: '#d97706',
+            color: '#b91c1c',
             fillOpacity: 0.7
           };
         }
@@ -186,10 +186,10 @@ const WorldMap = ({ entries, allEntries, refreshTrigger, onWarning }) => {
       }
 
       return {
-        fillColor: '#e0e0e0',
+        fillColor: '#d2b48c',
         weight: 1,
         opacity: 1,
-        color: '#9e9e9e',
+        color: '#a0826d',
         fillOpacity: 0.7
       };
     };
