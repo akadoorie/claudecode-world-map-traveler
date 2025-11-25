@@ -49,7 +49,13 @@ A complete, production-ready web application for tracking and visualizing world 
    - Lists specific places visited
    - Beautiful popup design
 
-5. **Add Visit Form**
+5. **Place Markers**
+   - Red dots marking specific locations
+   - Click markers to view place details
+   - Google Maps integration with "Open in Google Maps" link
+   - Opens exact coordinates in new browser tab
+
+6. **Add Visit Form**
    - Modal dialog with smooth animation
    - Date validation
    - Place parsing (comma-separated)

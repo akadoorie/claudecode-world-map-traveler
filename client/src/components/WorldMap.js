@@ -369,6 +369,7 @@ const WorldMap = ({ entries, allEntries, refreshTrigger, onWarning }) => {
                 visits.forEach(visit => {
                   popupContent += `<small>${visit.dateFrom} to ${visit.dateTo}</small><br/>`;
                 });
+                popupContent += `<a href="https://www.google.com/maps?q=${coords.lat},${coords.lon}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`;
                 popupContent += `</div>`;
 
                 const marker = L.marker([coords.lat, coords.lon], { icon: placeIcon })

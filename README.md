@@ -8,6 +8,8 @@ A modern, professional web application to track and visualize all the countries 
 - **Timeline Navigation**: Navigate through your travel history chronologically using arrow keys or on-screen controls
 - **Country Counter**: Real-time counter showing unique countries visited
 - **Detailed Tooltips**: Hover over countries to see visit dates and specific places
+- **Place Markers**: Red dots mark specific locations with popups showing visit details
+- **Google Maps Integration**: Click red place markers to open the exact location in Google Maps
 - **Add New Visits**: Easy-to-use form to add new travel entries
 - **Responsive Design**: Works seamlessly on desktop browsers
 - **Modern UI**: Clean, professional interface with smooth animations
@@ -150,6 +152,10 @@ If the scripts don't work, you can:
   - Visit dates (from - to)
   - Specific places visited within that country
   - If no places are specified, it shows "Whole country visited"
+- **Click on red place markers** to see a popup with:
+  - Place name and country
+  - Visit dates
+  - "Open in Google Maps" link - click to open the exact location in Google Maps
 
 ### Adding New Visits
 1. Click the **"+ Add Visit"** button in the top-right corner

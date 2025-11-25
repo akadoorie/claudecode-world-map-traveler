@@ -107,3 +107,20 @@
 .place-popup small {
   color: #718096;
 }
+
+.place-popup a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.place-popup a:hover {
+  color: #764ba2;
+  background-color: #f3f4f6;
+  text-decoration: underline;
+}

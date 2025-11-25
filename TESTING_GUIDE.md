@@ -145,6 +145,38 @@ Before testing, ensure:
 
 ---
 
+### Test 5A: Place Markers and Google Maps Integration
+**Purpose**: Test red place markers and Google Maps links.
+
+**Steps**:
+1. Navigate to position 1/5 (France visible)
+2. Look for red dots on the map (Paris and Alsace)
+3. Click on one of the red dots
+4. Read the popup content
+5. Click "Open in Google Maps" link
+6. Verify Google Maps opens in new tab
+
+**Expected Results**:
+- ✅ Red dots visible on map for Paris and Alsace
+- ✅ Red dots have white border and shadow
+- ✅ Clicking red dot shows popup
+- ✅ Popup shows place name (e.g., "Paris")
+- ✅ Popup shows country (e.g., "France")
+- ✅ Popup shows visit dates
+- ✅ Popup has "Open in Google Maps" link at bottom
+- ✅ Link is styled in purple color (#667eea)
+- ✅ Link has hover effect (background color changes)
+- ✅ Clicking link opens Google Maps in new tab
+- ✅ Google Maps shows correct location
+- ✅ Coordinates match the geocoded location
+
+**Notes**:
+- The link should have target="_blank" (opens in new tab)
+- Google Maps should center on the exact coordinates
+- URL format should be: https://www.google.com/maps?q=lat,lon
+
+---
+
 ### Test 6: Country Counter Logic
 **Purpose**: Verify unique country counting.
 
@@ -501,6 +533,7 @@ Use this checklist to track your testing:
 - [ ] Test 3: Backward Navigation
 - [ ] Test 4: Keyboard Controls
 - [ ] Test 5: Country Tooltips
+- [ ] Test 5A: Place Markers and Google Maps Integration
 - [ ] Test 6: Country Counter Logic
 - [ ] Test 7: Add Form - Open/Close
 - [ ] Test 8: Add Form - Validation

@@ -78,6 +78,11 @@ Your browser will automatically open to http://localhost:3000
 - Hover over any blue (visited) country
 - You should see a popup with dates and places
 
+### ✓ Place Markers
+- Look for red dots on the map (specific locations)
+- Click on a red dot to see place details
+- Click "Open in Google Maps" to view the location in Google Maps
+
 ### ✓ Add New Country
 1. Click "+ Add Visit" button
 2. Fill in: Country = "Greece", From = "2023-07-01", To = "2023-07-10", Places = "Athens, Santorini"
