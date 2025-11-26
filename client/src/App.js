@@ -5,6 +5,8 @@ import Controls from './components/Controls';
 import Counter from './components/Counter';
 import AddCountryForm from './components/AddCountryForm';
 import Notification from './components/Notification';
+import MapSourceToggle from './components/MapSourceToggle';
+import { DEFAULT_MAP_SOURCE } from './mapConfig';
 import './App.css';
 
 const API_URL = 'http://localhost:5000/api';
@@ -17,6 +19,7 @@ function App() {
   const [showAddForm, setShowAddForm] = useState(false);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [notifications, setNotifications] = useState([]);
+  const [mapSource, setMapSource] = useState(DEFAULT_MAP_SOURCE);
 
   useEffect(() => {
     fetchCountries();
@@ -157,11 +160,16 @@ function App() {
       </header>
 
       <div className="map-container">
+        <MapSourceToggle
+          currentSource={mapSource}
+          onSourceChange={setMapSource}
+        />
         <WorldMap
           entries={visibleEntries}
           allEntries={entries}
           refreshTrigger={refreshTrigger}
           onWarning={handleWarning}
+          mapSource={mapSource}
         />
       </div>
 

@@ -2,10 +2,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import axios from 'axios';
 import './WorldMap.css';
+import mapSources, { DEFAULT_MAP_SOURCE } from '../mapConfig';
 
-const WorldMap = ({ entries, allEntries, refreshTrigger, onWarning }) => {
+const WorldMap = ({ entries, allEntries, refreshTrigger, onWarning, mapSource = DEFAULT_MAP_SOURCE }) => {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
+  const tileLayerRef = useRef(null);
   const geoJsonLayerRef = useRef(null);
   const placeMarkersRef = useRef({});
   const geocodingCacheRef = useRef({});
@@ -88,13 +90,15 @@ const WorldMap = ({ entries, allEntries, refreshTrigger, onWarning }) => {
       worldCopyJump: true
     });
 
-    // Custom tile layer with darker ocean colors
-    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles &copy; Esri',
-      maxZoom: 19
+    // Add tile layer from config
+    const sourceConfig = mapSources[mapSource] || mapSources[DEFAULT_MAP_SOURCE];
+    const tileLayer = L.tileLayer(sourceConfig.url, {
+      attribution: sourceConfig.attribution,
+      maxZoom: sourceConfig.maxZoom
     }).addTo(map);
 
     mapInstanceRef.current = map;
+    tileLayerRef.current = tileLayer;
 
     return () => {
       if (mapInstanceRef.current) {
@@ -103,6 +107,23 @@ const WorldMap = ({ entries, allEntries, refreshTrigger, onWarning }) => {
       }
     };
   }, []);
+
+  // Update tile layer when map source changes
+  useEffect(() => {
+    if (!mapInstanceRef.current || !tileLayerRef.current) return;
+
+    // Remove old tile layer
+    mapInstanceRef.current.removeLayer(tileLayerRef.current);
+
+    // Add new tile layer
+    const sourceConfig = mapSources[mapSource] || mapSources[DEFAULT_MAP_SOURCE];
+    const newTileLayer = L.tileLayer(sourceConfig.url, {
+      attribution: sourceConfig.attribution,
+      maxZoom: sourceConfig.maxZoom
+    }).addTo(mapInstanceRef.current);
+
+    tileLayerRef.current = newTileLayer;
+  }, [mapSource]);
 
   // Update map with visited countries
   useEffect(() => {
