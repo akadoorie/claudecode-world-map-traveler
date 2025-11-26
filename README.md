@@ -1,6 +1,16 @@
-# World Map Traveler
+<div align="center">
 
-A modern, professional web application to track and visualize all the countries and places you've visited over the years.
+# 🗺️ World Map Traveler
+
+### Track and visualize all the countries and places you've visited
+
+<img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/googlemaps.svg" width="100" height="100" alt="World Map Icon"/>
+
+*A modern, professional web application for your travel memories*
+
+</div>
+
+---
 
 ## Features
 
