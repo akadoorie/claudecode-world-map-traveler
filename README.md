@@ -4,7 +4,7 @@
 
 ### Track and visualize all the countries and places you've visited
 
-<img src="https://raw.githubusercontent.com/StephanWagner/worldMapSvg/master/maps/world.svg" width="400" alt="World Map"/>
+<img src="https://raw.githubusercontent.com/StephanWagner/worldMapSvg/master/maps/world-with-stroke.svg" width="400" alt="World Map"/>
 
 *A modern, professional web application for your travel memories*
 
