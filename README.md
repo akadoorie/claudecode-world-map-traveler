@@ -122,21 +122,21 @@ You can easily stop the application using the provided scripts:
 ### Windows (Command Prompt or PowerShell)
 ```bash
 # Stop both client and server
-stop-all.bat
+scripts\stop-all.bat
 
 # Or stop them individually
-stop-client.bat  # Stops React client on port 3000
-stop-server.bat  # Stops Flask server on port 5000
+scripts\stop-client.bat  # Stops React client on port 3000
+scripts\stop-server.bat  # Stops Flask server on port 5000
 ```
 
 ### Git Bash or WSL
 ```bash
 # Stop both client and server
-./stop-all.sh
+./scripts/stop-all.sh
 
 # Or stop them individually
-./stop-client.sh  # Stops React client on port 3000
-./stop-server.sh  # Stops Flask server on port 5000
+./scripts/stop-client.sh  # Stops React client on port 3000
+./scripts/stop-server.sh  # Stops Flask server on port 5000
 ```
 
 ### Manual Method
